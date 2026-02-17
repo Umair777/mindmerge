@@ -13,7 +13,7 @@ export default function Header({ title }) {
 						</span>
 					</div>
 					<span className="text-[#808080] text-lg font-bold" >
-						{"New Question"}
+						{title}
 					</span>
 					<div className="flex-1 self-stretch">
 					</div>

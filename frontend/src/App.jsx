@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import PostView from "./pages/PostView";
+
 import AnswerView from "./pages/AnswerView";
+import PostQuestion from "./pages/postQuestion";
 
 function App() {
   const [questions, setQuestions] = useState([]);
@@ -19,7 +20,7 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={<PostView questions={questions} />}
+              element={<PostQuestion />}
             />
             <Route
               path="/answer/"

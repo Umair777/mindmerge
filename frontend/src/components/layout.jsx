@@ -1,19 +1,22 @@
 import React from "react";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
+import Header from "./header";
+import Sidebar from "./sidebar";
 
 export default function Layout({ title, children }) {
   return (
     <div className="flex flex-col bg-white min-h-screen">
 
       <Header title={title} />
-
+      
       <div className="flex">
+
         <Sidebar />
 
-        <div className="flex-1 p-10">
+        {/* Main content area */}
+        <div className="flex flex-1 gap-[45px] px-10 py-[30px] bg-[#FCF4EC]">
           {children}
         </div>
+
       </div>
 
     </div>
