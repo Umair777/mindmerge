@@ -1,7 +1,10 @@
 import React from "react";
-export default function PostView({ questions }) {
+import { useNavigate } from "react-router-dom";
 
+export default function PostView({ questions }) {
+	const navigate = useNavigate();
 	return (
+		
 		<div className="flex flex-col bg-white">
 			<div className="self-stretch bg-neutral-50">
 				<div className="flex items-center self-stretch bg-white py-[17px] px-[50px] border border-solid border-[#EAEAEA]">
@@ -147,16 +150,10 @@ export default function PostView({ questions }) {
 								</span>
 							</div> */}
 							
-							{/* <div className="flex flex-col items-start self-stretch pt-2.5 pb-[321px] pl-2.5 rounded-[5px] border-2 border-solid border-[#EAEAEA]">
-								<span className="text-[#808080] text-xs" >
-									{"Type your question"}
-								</span>
-							</div> */}
 							<textarea
   placeholder="Type your question"
-  className="self-stretch min-h-[321px] pt-2.5 pl-2.5 rounded-[5px] border-2 border-[#EAEAEA] text-xs text-[#808080] resize-none outline-none focus:border-[#EAEAEA]"
+  className="w-full min-h-[321px] p-3 bg-white border border-gray-300 rounded-md text-black placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
 />
-
 							<div className="flex justify-between items-center self-stretch">
 								<button className="flex shrink-0 items-center bg-[#1682FD] text-left py-2 px-5 gap-3 rounded-[5px] border-0"
 									onClick={()=>alert("Pressed!")}>
@@ -176,7 +173,7 @@ export default function PostView({ questions }) {
 										</span>
 									</button>
 									<button className="flex shrink-0 items-center bg-[#F48023] text-left py-2 px-5 gap-3 rounded-[5px] border-0"
-										onClick={()=>alert("Pressed!")}>
+										onClick={()=>navigate("/answer")}>
 										<img
 											src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/4j9QAmMJn9/sd7bdvbx_expires_30_days.png"} 
 											className="w-[13px] h-[13px] rounded-[5px] object-fill"

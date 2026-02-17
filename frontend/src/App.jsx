@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PostView from "./pages/PostView";
+import AnswerView from "./pages/AnswerView";
 
 function App() {
   const [questions, setQuestions] = useState([]);
@@ -19,6 +20,10 @@ function App() {
             <Route
               path="/"
               element={<PostView questions={questions} />}
+            />
+            <Route
+              path="/answer/"
+              element={<AnswerView />}
             />
           </Routes>
         </BrowserRouter>
