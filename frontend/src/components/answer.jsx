@@ -1,5 +1,5 @@
 import React from "react";
-export default function Answer() {
+export default function Answer( {question}) {
     return (
         
         <div className="flex flex-col bg-white">
@@ -34,7 +34,7 @@ export default function Answer() {
                                     />
                                 </div>
                                 <span className="text-black text-lg font-bold ml-10" >
-                                    {"How to patch KDE on FreeBSD?"}
+                                    {question}
                                 </span>
                                 <span className="text-black text-sm ml-10" >
                                     {"Mi magna sed nec nisl mattis. Magna cursus tincidunt rhoncus imperdiet fermentum pretium, pharetra nisl. Euismod."}

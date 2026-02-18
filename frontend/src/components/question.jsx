@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 
-export default function Question() {
+export default function Question( {Question, setQuestion} ) {
     const navigate = useNavigate();
   return (
     <div className="flex-1 p-0">
@@ -14,6 +14,8 @@ export default function Question() {
 							
 							
 							<textarea
+							value={Question}
+							onChange={(e) => setQuestion(e.target.value)}
 							placeholder="Type your question"
 							className="w-full min-h-[321px] p-3 bg-white border border-gray-300 rounded-md text-black placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
 							/>
