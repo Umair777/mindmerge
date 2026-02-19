@@ -6,7 +6,7 @@ import CodeBlock from "./answercard/codeBlock";
 export default function Answer( {question}) {
     return (
         
-        <div className="flex flex-col bg-[#FCF4EC]">
+        <div className="flex flex-col bg-white">
             <div className="self-stretch bg-white ">
                 
                 <div className="flex items-start self-stretch mr-[82px] gap-[9px] ">
